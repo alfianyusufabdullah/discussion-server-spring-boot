@@ -1,0 +1,65 @@
+# API Discussions Spec
+
+## Getting all discussion
+
+- Method: POST
+- Endpoint: `api/discussion`
+- Header: 
+    - Content-type: `application/json`
+    - Accept: `application/json`
+- Request:
+```json
+{
+   "creator_username": "String",
+   "title": "String",
+   "question": "String"
+}
+```
+- Response:
+```json
+{
+    "status": "Int",
+    "message": "String"
+}
+```
+
+## Getting all discussion
+
+- Method: GET
+- Endpoint: `api/discussion`
+- Header: 
+    - Accept: `application/json`
+- Response Success:
+```json
+{
+    "status": "Int",
+    "message": "String",
+    "data": {
+         "total": "Int",
+         "page": "Int",
+         "discussions": [
+                  {
+                      "id_discussion": "String",
+                      "creator_username": "String",
+                      "created_at": "Date",
+                      "title": "String",
+                      "question": "String"
+                  },
+                  {
+                      "id_discussion": "String",
+                      "creator_username": "String",
+                      "created_at": "Date",
+                      "title": "String",
+                      "question": "String"                             
+                  }
+              ]
+    }
+}
+```
+- Response Empty:
+```json
+{
+    "status": "Int",
+    "message": "String"
+}
+```
