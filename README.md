@@ -1,6 +1,6 @@
 # API Discussions Spec
 
-## Getting all discussion
+## Added new discussion
 
 - Method: POST
 - Endpoint: `api/discussion`
