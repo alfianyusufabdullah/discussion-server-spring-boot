@@ -1,7 +1,11 @@
 package alfianyusufabdullah.exp.discussion.model
 
-data class DiscussionResponse<T>(
-        val code: Int,
-        val message: String,
-        val data: T?
+import java.util.*
+
+data class DiscussionResponse(
+        val idDiscussion: String,
+        val creatorUsername: String,
+        val createdAt: Date,
+        val title: String,
+        val question: String
 )
