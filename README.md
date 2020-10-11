@@ -19,7 +19,14 @@
 ```json
 {
     "status": "Int",
-    "message": "String"
+    "message": "String",
+    "data": {
+         "id_discussion": "String",
+         "creator_username": "String",
+         "created_at": "Date",
+         "title": "String",
+         "question": "String"
+    }
 }
 ```
 
