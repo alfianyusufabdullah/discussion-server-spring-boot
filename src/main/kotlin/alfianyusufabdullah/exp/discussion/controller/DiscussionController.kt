@@ -34,7 +34,7 @@ class DiscussionController(val discussionService: DiscussionService) {
 
         return WebResponse(
                 code = 200,
-                message = "Successfully retrieve all discussion",
+                message = "Successfully retrieve discussions",
                 data = ListDiscussionResponse(
                         response.page,
                         response.size,
