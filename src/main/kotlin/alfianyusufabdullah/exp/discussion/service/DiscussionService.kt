@@ -1,9 +1,13 @@
 package alfianyusufabdullah.exp.discussion.service
 
+import alfianyusufabdullah.exp.discussion.model.DiscussionResponse
+import alfianyusufabdullah.exp.discussion.model.ListDiscussionRequest
+import alfianyusufabdullah.exp.discussion.model.ListDiscussionResponse
 import alfianyusufabdullah.exp.discussion.model.NewDiscussionRequest
-import alfianyusufabdullah.exp.discussion.model.NewDiscussionResponse
 
 interface DiscussionService {
 
-    fun publishNewDiscussion(newDiscussionRequest: NewDiscussionRequest): NewDiscussionResponse
+    fun publishNewDiscussion(newDiscussionRequest: NewDiscussionRequest): DiscussionResponse
+
+    fun findAllDiscussions(listDiscussionRequest: ListDiscussionRequest): ListDiscussionResponse
 }
