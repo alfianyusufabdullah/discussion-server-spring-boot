@@ -5,6 +5,7 @@ import alfianyusufabdullah.exp.discussion.model.NewDiscussionRequest
 import alfianyusufabdullah.exp.discussion.model.DiscussionResponse
 import alfianyusufabdullah.exp.discussion.model.ListDiscussionRequest
 import alfianyusufabdullah.exp.discussion.model.ListDiscussionResponse
+import alfianyusufabdullah.exp.discussion.repository.CommentRepository
 import alfianyusufabdullah.exp.discussion.repository.DiscussionRepository
 import org.springframework.data.domain.PageRequest
 import org.springframework.stereotype.Service
@@ -12,7 +13,7 @@ import java.util.*
 import java.util.stream.Collectors
 
 @Service
-class DiscussionServiceImpl(val discussionRepository: DiscussionRepository) : DiscussionService {
+class DiscussionServiceImpl(val discussionRepository: DiscussionRepository, val commentRepository: CommentRepository) : DiscussionService {
 
     override fun publishNewDiscussion(newDiscussionRequest: NewDiscussionRequest): DiscussionResponse {
         val newDiscussion = DiscussionsEntity(
@@ -47,7 +48,8 @@ class DiscussionServiceImpl(val discussionRepository: DiscussionRepository) : Di
                             creatorUsername = it.creatorUsername,
                             createdAt = it.createdAt,
                             title = it.title,
-                            question = it.question
+                            question = it.question,
+                            replyCount = commentRepository.count().toInt()
                     )
                 }
         )
