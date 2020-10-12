@@ -8,5 +8,5 @@ data class DiscussionResponse(
         val createdAt: Date,
         val title: String,
         val question: String,
-        val replyCount: Int
+        val replyCount: Int = 0
 )
