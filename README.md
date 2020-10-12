@@ -76,7 +76,7 @@
 ## Reply Discussion
 
 - Method: POST
-- Endpoint: `api/discussion`
+- Endpoint: `api/comment`
 - Header: 
     - Content-type: `application/json`
     - Accept: `application/json`
