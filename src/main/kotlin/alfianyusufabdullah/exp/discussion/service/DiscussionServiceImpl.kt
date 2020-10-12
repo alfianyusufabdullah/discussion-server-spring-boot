@@ -49,7 +49,7 @@ class DiscussionServiceImpl(val discussionRepository: DiscussionRepository, val 
                             createdAt = it.createdAt,
                             title = it.title,
                             question = it.question,
-                            replyCount = commentRepository.count().toInt()
+                            replyCount = commentRepository.findAll().filter { comment -> it.idDiscussion == comment.idParent }.size
                     )
                 }
         )
