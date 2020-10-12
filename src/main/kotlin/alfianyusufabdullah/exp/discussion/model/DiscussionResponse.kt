@@ -7,5 +7,6 @@ data class DiscussionResponse(
         val creatorUsername: String,
         val createdAt: Date,
         val title: String,
-        val question: String
+        val question: String,
+        val replyCount: Int
 )
