@@ -7,6 +7,5 @@ data class CommentResponse(
         val idParent: String,
         val creatorUsername: String,
         val createdAt: Date,
-        val title: String,
         val comment: String
 )
