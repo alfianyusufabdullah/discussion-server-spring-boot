@@ -16,8 +16,8 @@ class DiscussionServiceImpl(val discussionRepository: DiscussionRepository) : Di
 
     override fun publishNewDiscussion(newDiscussionRequest: NewDiscussionRequest): DiscussionResponse {
         val newDiscussion = DiscussionsEntity(
-                idDiscussion = "${newDiscussionRequest.creatorUsername}-${System.currentTimeMillis()}",
-                creatorUsername = newDiscussionRequest.creatorUsername,
+                idDiscussion = "${newDiscussionRequest.creator_username}-${System.currentTimeMillis()}",
+                creatorUsername = newDiscussionRequest.creator_username,
                 createdAt = Date(),
                 title = newDiscussionRequest.title,
                 question = newDiscussionRequest.question

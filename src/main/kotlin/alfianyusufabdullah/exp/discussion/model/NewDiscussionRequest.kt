@@ -1,7 +1,7 @@
 package alfianyusufabdullah.exp.discussion.model
 
 data class NewDiscussionRequest(
-        val creatorUsername: String,
+        val creator_username: String,
         val title: String,
         val question: String
 )
