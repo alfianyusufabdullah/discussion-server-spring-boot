@@ -19,9 +19,6 @@ data class CommentEntity(
         @Column(name = "creator_at")
         val createdAt: Date,
 
-        @Column(name = "title")
-        val title: String,
-
-        @Column(name = "creator_username")
+        @Column(name = "comment")
         val comment: String
 )
