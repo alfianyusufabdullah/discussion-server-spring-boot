@@ -94,7 +94,7 @@
     "status": "Int",
     "message": "String",
     "data": {
-         "id_discussion": "String",
+         "id_parent": "String",
          "id_comment": "String",
          "creator_username": "String",
          "created_at": "Date",
