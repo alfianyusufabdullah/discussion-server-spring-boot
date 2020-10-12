@@ -72,3 +72,34 @@
     "message": "String"
 }
 ```
+
+## Reply Discussion
+
+- Method: POST
+- Endpoint: `api/discussion`
+- Header: 
+    - Content-type: `application/json`
+    - Accept: `application/json`
+- Request:
+```json
+{
+   "id_parent": "String",
+   "creator_username": "String",
+   "comment": "String"
+}
+```
+- Response:
+```json
+{
+    "status": "Int",
+    "message": "String",
+    "data": {
+         "id_discussion": "String",
+         "id_comment": "String",
+         "creator_username": "String",
+         "created_at": "Date",
+         "title": "String",
+         "comment": "String"
+    }
+}
+```
